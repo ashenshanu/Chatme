@@ -1,4 +1,5 @@
 <?php
+    include "./encrip.php";
     while($row = mysqli_fetch_assoc($query)){
         $sql2 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row['unique_id']}
                 OR outgoing_msg_id = {$row['unique_id']}) AND (outgoing_msg_id = {$outgoing_id} 
@@ -20,7 +21,7 @@
                     <img src="php/images/'. $row['img'] .'" alt="">
                     <div class="details">
                         <span>'. $row['fname']. " " . $row['lname'] .'</span>
-                        <p>'. $you . $msg .'</p>
+                        <p>'. $you . decryptIt($msg) .'</p>
                     </div>
                     </div>
                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>

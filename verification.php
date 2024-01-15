@@ -1,7 +1,9 @@
 <?php 
   session_start();
-  if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 1){
+  if(!isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 1){
     header("location: users.php");
+  }elseif(!isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 0){
+    header("location: index.php");
   }
 ?>
 
@@ -9,18 +11,15 @@
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>Realtime Chat App</header>
+      <header>Account Verification</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <p>Please enter the 6 digit code sent to your email address.</p>
         <div class="error-text"></div>
         <div class="field input">
-          <label>Email Address</label>
-          <input type="text" name="email" placeholder="Enter your email" required>
+          <label>Code</label>
+          <input type="text" name="email" placeholder="Enter 6 digits code" required>
         </div>
-        <div class="field input">
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Enter your password" required>
-          <i class="fas fa-eye"></i>
-        </div>
+        
         <div class="field button">
           <input type="submit" name="submit" value="Continue to Chat">
         </div>

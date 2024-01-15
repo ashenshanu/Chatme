@@ -1,8 +1,8 @@
 <?php 
   session_start();
   include_once "php/config.php";
-  if(!isset($_SESSION['unique_id'])){
-    header("location: login.php");
+  if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 0){
+    header("location: verification.php");
   }
 ?>
 <?php include_once "header.php"; ?>
