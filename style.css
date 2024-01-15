@@ -138,7 +138,7 @@ body{
   align-items: center;
 }
 :is(.users, .users-list) .content .details{
-  color: #000;
+  color: #000000;
   margin-left: 20px;
 }
 :is(.users, .users-list) .details span{
