@@ -24,7 +24,7 @@ function send_email($to, $subject, $body) {
         $mail->Port       = 465;                                    // TCP port to connect to
 
         // Recipients
-        $mail->setFrom('hello.mrpc@gmail.com', 'Mr.PC');
+        $mail->setFrom('hello.chatme@gmail.com', 'Chat ME');
         $mail->addAddress($to, 'User');     // Add a recipient
 
         // Content
