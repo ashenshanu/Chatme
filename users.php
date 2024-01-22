@@ -5,7 +5,9 @@
     header("location: verification.php");
   }elseif (isset($_SESSION['unique_id']) && $_SESSION['email_verification'] == 1 && $_SESSION['status'] !== 'Active now') {
     header("location: two-factor.php");
-  }  
+  }elseif (!isset($_SESSION['unique_id'])) {
+    header("location: index.php");
+  }
 ?>
 <?php include_once "header.php"; ?>
 <body>

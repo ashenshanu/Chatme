@@ -1,10 +1,12 @@
 <?php 
   session_start();
-  if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] == 1){
-    header("location: users.php");
-  
-  }else{
-    session_destroy();
+  include_once "./php/config.php";
+  if(isset($_SESSION['unique_id'])){
+    $status = "Offline now";
+    $sql = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id={$_SESSION['unique_id']}");
+    if($sql){
+        session_destroy();
+    }
   }
 
 ?>
