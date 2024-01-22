@@ -1,11 +1,12 @@
 <?php 
   session_start();
-  if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 1){
+  if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] == 1){
     header("location: users.php");
   
-  }elseif(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] = 0){
-    header("location: verification.php");
-  } 
+  }else{
+    session_destroy();
+  }
+
 ?>
 
 <?php include_once "header.php"; ?>
