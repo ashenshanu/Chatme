@@ -218,7 +218,7 @@ function fogetPasswordVerificationSend($toEmail,$resetLink){
 
 
   $to = $toEmail;
-  $subject = "Reset Your Mr.PC Account Password";
+  $subject = "Reset Your ChatMe Account Password";
   $body = "<!DOCTYPE html>
   <html lang='en'>
   <body style='width: 100%;'>
@@ -240,7 +240,7 @@ function fogetPasswordVerificationSend($toEmail,$resetLink){
                   </tr>
                   <tr style='margin-top: 30px;'>
                     <td style='width: 512px; font-size: 16px;font-weight: 500; text-align: left;'>
-                      Please use this link to reset the password for the <a href='#' style='color: #FF9C00;text-decoration: none;'>Mr.PC!</a> Account. 
+                      Please use this link to reset the password for the <a href='#' style='color: #FF9C00;text-decoration: none;'>ChatMe!</a> Account. 
                     </td>
                   </tr>
                   <tr>
@@ -250,7 +250,7 @@ function fogetPasswordVerificationSend($toEmail,$resetLink){
                   </tr>
                   <tr style='margin-top: 40px;margin-bottom: 30px;'>
                     <td style='text-align: left;'>
-                      Thanks,<br>The Mr.PC Team 
+                      Thanks,<br>The ChatMe Team 
                     </td>
                   </tr>
                 </table>
@@ -264,7 +264,7 @@ function fogetPasswordVerificationSend($toEmail,$resetLink){
                   </tr>
                   <tr>
                     <td style='font-family: 'Manrope', sans-serif; font-size: 14px; text-align: center; color: gray;'>
-                      You have received this mandatory service announcement to update you about important changes to <a href='#' style='color: #FF9C00; text-decoration: none;'>Mr.PC</a> or your account.
+                      You have received this mandatory service announcement to update you about important changes to <a href='#' style='color: #FF9C00; text-decoration: none;'>ChatMe</a> or your account.
                     </td>
                   </tr>
                 </table>

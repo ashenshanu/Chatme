@@ -3,6 +3,8 @@
   
   if(isset($_SESSION['unique_id']) && $_SESSION['email_verification'] == 1){
     header("location: users.php");
+  }else{
+    session_destroy();
   }
 ?>
 
@@ -22,6 +24,8 @@
           <input type="password" name="password" placeholder="Enter your password" required>
           <i class="fas fa-eye"></i>
         </div>
+      <div class="link"><a href="send-resets.php">Forgot Password</a></div>
+
         <div class="field button">
           <input type="submit" name="submit" value="Continue to Chat">
         </div>
