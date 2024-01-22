@@ -39,8 +39,10 @@
                                         $_SESSION['unique_id'] = $result['unique_id'];
                                         $_SESSION['waiting_email'] = $result['email'];
                                         $_SESSION['email_verification'] = $result['email_verification'];
+                                    
                                         emailVerificationSend($result['email']);
                                         echo "success";
+                                        
                                     }else{
                                         echo "This email address not Exist!";
                                     }

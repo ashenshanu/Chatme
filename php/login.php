@@ -1,6 +1,8 @@
 <?php 
     session_start();
     include_once "config.php";
+    include_once "email-functions.php";
+
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     if(!empty($email) && !empty($password)){
@@ -10,11 +12,15 @@
             $user_pass = md5($password);
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
-                $status = "Active now";
+                $status = "tf pending";
                 $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
                 if($sql2){
                     $_SESSION['unique_id'] = $row['unique_id'];
                     $_SESSION['email_verification'] = $row['email_verification'];
+                    $_SESSION['waiting_email'] = $row['email'];
+                    $_SESSION['status'] = $status;
+                    
+                    loginAuthenticationSend($_SESSION['waiting_email']);
                     
                     echo "success";
                 }else{
