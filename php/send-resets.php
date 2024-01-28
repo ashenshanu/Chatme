@@ -14,8 +14,10 @@
         $getUserId = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}';");
         if($getUserId){
             $row = mysqli_fetch_assoc($getUserId);
-            $user_id = $row['unique_id'];
-
+            if(isset($row)){
+                $user_id = $row['unique_id'];
+            
+            }
             if(!empty($user_id)){
                 $markAttempt = mysqli_query($conn, "INSERT INTO reset_attempt (user_id, reset_url)
                 VALUES ('{$user_id}', '{$randomCode}');");
