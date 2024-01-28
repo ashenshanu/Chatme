@@ -1,12 +1,16 @@
 const form = document.querySelector(".reset_password form"),
-continueBtn = form.querySelector(".button input"),
-errorText = form.querySelector(".error-text");
+continueBtn = form.querySelector(".button button"),
+errorText = form.querySelector(".error-text"),
+buttonText = form.querySelector(".button button span"),
+buttonLoading = form.querySelector(".button button img");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
 }
 
 continueBtn.onclick = ()=>{
+  buttonText.style.display = "none";
+  buttonLoading.style.display = "block";
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/send-resets.php", true);
     xhr.onload = ()=>{
@@ -17,6 +21,8 @@ continueBtn.onclick = ()=>{
                 alert("Password reset link sent to your email address."); 
                 location.href = "login.php";
               }else{
+                buttonLoading.style.display = "none";
+                buttonText.style.display = "block";
                 errorText.style.display = "block";
                 errorText.textContent = data;
               }
