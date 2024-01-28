@@ -16,7 +16,6 @@
             $row = mysqli_fetch_assoc($getUserId);
             if(isset($row)){
                 $user_id = $row['unique_id'];
-            
             }
             if(!empty($user_id)){
                 $markAttempt = mysqli_query($conn, "INSERT INTO reset_attempt (user_id, reset_url)
