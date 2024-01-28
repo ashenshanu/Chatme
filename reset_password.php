@@ -31,7 +31,7 @@
         <div class="error-text"></div>
         <div class="field input">
           <label>Code</label>
-          <input type="password" name="new_pass" id="new_pass" placeholder="Enter 6 digits code" required>
+          <input type="password" name="new_pass" id="new_pass" placeholder="Enter your new password" required>
           <input type="hidden" name="current_email" id="current_email" value="<?php echo $email; ?>">
         </div>
         
