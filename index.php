@@ -42,7 +42,8 @@
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+          <button type="submit" class="loading-btn" name="submit"><span>Submit to Sign Up</span><img src="assets/loading-icon.gif" alt="ChatMe Loading"></button>
+
         </div>
       </form>
       <div class="link">Already signed up? <a href="login.php">Login now</a></div>
@@ -51,6 +52,8 @@
 
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/signup.js"></script>
+  <?php include "php/background.php"; ?>
+  
 
 </body>
 </html>

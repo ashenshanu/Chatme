@@ -25,7 +25,8 @@
         </div>
         
         <div class="field button">
-          <input type="submit" name="submit" value="Continue to Chat">
+          <button type="submit" class="loading-btn" name="submit"><span>Continue to Chat</span><img src="assets/loading-icon.gif" alt="ChatMe Loading"></button>
+
         </div>
       <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
 
@@ -35,6 +36,7 @@
   
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/two-factor.js"></script>
+  <?php include "php/background.php"; ?>
 
 </body>
 </html>

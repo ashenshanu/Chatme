@@ -1,13 +1,17 @@
 const form = document.querySelector(".verification form"),
-continueBtn = form.querySelector(".button input"),
+continueBtn = form.querySelector(".button button"),
 errorText = form.querySelector(".error-text"),
-resendBtn = form.querySelector(".button #resend");
+resendBtn = form.querySelector(".button #resend"),
+buttonText = form.querySelector(".button button span"),
+buttonLoading = form.querySelector(".button button img");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
 }
 
 continueBtn.onclick = ()=>{
+  buttonText.style.display = "none";
+  buttonLoading.style.display = "block";
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/verification.php", true);
     xhr.onload = ()=>{
@@ -17,6 +21,8 @@ continueBtn.onclick = ()=>{
               if(data === "success"){
                 location.href = "login.php";
               }else{
+                buttonLoading.style.display = "none";
+                buttonText.style.display = "block";
                 errorText.style.display = "block";
                 errorText.textContent = data;
               }

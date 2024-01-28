@@ -17,7 +17,8 @@
         </div>
         
         <div class="field button">
-          <input type="submit" name="submit" value="Continue">
+          <button type="submit" class="loading-btn" name="submit"><span>Continue</span><img src="assets/loading-icon.gif" alt="ChatMe Loading"></button>
+
           <div class="link">
             <a href="login.php">Back</a>
           </div>
@@ -28,6 +29,7 @@
   
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/send-resets.js"></script>
+  <?php include "php/background.php"; ?>
 
 </body>
 </html>

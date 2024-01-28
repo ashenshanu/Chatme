@@ -42,6 +42,8 @@
   </div>
 
   <script src="javascript/chat.js"></script>
+  <?php include "php/background.php"; ?>
+
 
 </body>
 </html>

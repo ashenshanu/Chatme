@@ -41,6 +41,7 @@
   </div>
 
   <script src="javascript/users.js"></script>
+  <?php include "php/background.php"; ?>
 
 </body>
 </html>

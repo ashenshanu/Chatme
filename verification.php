@@ -21,7 +21,7 @@
         </div>
         
         <div class="field button">
-          <input type="submit" name="submit" value="Continue">
+          <button type="submit" class="loading-btn" name="submit"><span>Continue</span><img src="assets/loading-icon.gif" alt="ChatMe Loading"></button>
           <input type="button" name="resend" id="resend" value="Resend">
         </div>
       </form>
@@ -31,6 +31,8 @@
   
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/verification.js"></script>
+  <?php include "php/background.php"; ?>
+
 
 </body>
 </html>

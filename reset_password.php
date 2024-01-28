@@ -36,7 +36,8 @@
         </div>
         
         <div class="field button">
-          <input type="submit" name="submit" value="Create">
+          <button type="submit" class="loading-btn" name="submit"><span>Create</span><img src="assets/loading-icon.gif" alt="ChatMe Loading"></button>
+
         </div>
       </form>
     </section>
@@ -44,6 +45,7 @@
   
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/password-reset.js"></script>
+  <?php include "php/background.php"; ?>
 
 </body>
 </html>
