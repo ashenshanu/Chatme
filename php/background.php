@@ -1,5 +1,7 @@
 
-<div id="particles-js"></div>
+<img id="chatmeapp-icon" src="assets/chatme-icon.png" alt="" srcset="">
+<div id="particles-js">
+</div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     /* ---- particles.js config ---- */
