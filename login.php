@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>Realtime Chat App</header>
+      <header>ChatMe</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="field input">
